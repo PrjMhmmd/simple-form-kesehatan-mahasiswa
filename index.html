@@ -57,5 +57,30 @@
             
 
         </form>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("myForm");
+    
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+    
+                const nama = document.getElementById("inputName").value;
+                const usia = document.getElementById("usia").value;
+                const gender = document.getElementById("Gender").value;
+                const jumlahMakan = document.getElementById("jumlahMakan").value;
+                const sarapan = document.getElementById("sarapan").value;
+                const olahraga = document.getElementById("olahraga").value;
+    
+                localStorage.setItem("nama", nama);
+                localStorage.setItem("usia", usia);
+                localStorage.setItem("gender", gender);
+                localStorage.setItem("jumlahMakan", jumlahMakan);
+                localStorage.setItem("sarapan", sarapan);
+                localStorage.setItem("olahraga", olahraga);
+    
+                window.location.href = "result.html";
+            });
+            });
+        </script>
     </body>
 </html>
